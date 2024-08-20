@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>html块级元素和行内元素</title>
+    <style>
+        .block {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inline {
+            background-color: #e4e4e4;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- 块级元素 -->
+    <div class="block">
+        <h1>这是一个块级元素</h1>
+        <p>这是一个段落，属于块级元素。</p>
+    </div>
+    <pre>
+    块级元素与行内元素的主要区别
+
+    布局：
+    块级元素会独占一行，并且其宽度默认是父容器的 100%。
+    行内元素不会独占一行，它们的宽度和高度由其内容决定。
+
+    嵌套：
+    块级元素可以包含其他块级元素和行内元素。
+    行内元素通常只能包含行内元素和文本，不能直接包含块级元素。
+
+    样式：
+    块级元素可以通过 CSS 调整宽度和高度。
+    行内元素的宽度和高度通常由其内容决定，不能直接通过 CSS 调整。
+
+    特殊规则:
+      HTML 标准中明确规定，块级元素`<`h1`>` 到 `<`h6`>` 标题标签不能相互嵌套。 
+      每个标题标签应当独立使用，以便保持文档结构的清晰和正确。标题标签用于定义文档的各个章节和子章节，嵌套使用会破坏文档的语义结构和层级关系。
+
+      HTML 规范中规定，p（段落）标签中不能包含块级元素。这样做会破坏文档的结构和语义。
+      块级元素如 div, section, article, header, footer, nav, aside, h1-h6, ul, ol, li, blockquote, pre 等，应该独立于 p 标签之外使用。
+    </pre>
+    
+    <!-- 行内元素 -->
+    <p>这是一个段落，里面包含了几个行内元素：
+        <span class="inline">这是一个行内元素</span>，
+        <a href="#" class="inline">这是一个链接</a>，
+        <strong class="inline">这是加粗文本</strong>。
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 语义标签示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header,
+        footer {
+            background: #f4f4f4;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            margin: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1em;
+        }
+
+        main {
+            padding: 1em;
+            background: #fff;
+        }
+
+        article {
+            margin-bottom: 2em;
+        }
+
+        aside {
+            background: #f9f9f9;
+            padding: 1em;
+            margin-top: 1em;
+        }
+
+        blockquote {
+            border-left: 5px solid #ccc;
+            margin: 1em 0;
+            padding-left: 1em;
+            color: #555;
+        }
+
+        .preformatted {
+            background: #f4f4f4;
+            padding: 1em;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 页眉 -->
+    <header>
+        <h1>HTML 语义标签示例</h1>
+    </header>
+
+    <!-- 导航 -->
+    <nav>
+        <ul>
+            <li><a href="#section1">介绍</a></li>
+            <li><a href="#section2">主要内容</a></li>
+            <li><a href="#section3">联系信息</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主体内容 -->
+    <main>
+        <!-- 章节 -->
+        <section id="section1">
+            <h2>介绍</h2>
+            <p>本文档展示了各种 HTML 语义标签的使用方法。</p>
+        </section>
+
+        <section id="section2">
+            <h2>主要内容</h2>
+
+            <!-- 文章 -->
+            <article>
+                <header>
+                    <h3>文章标题</h3>
+                    <p>作者：张三 | 日期：2024年8月13日</p>
+                </header>
+                <p>这是文章的主要内容。语义标签有助于结构化文档并提高可访问性。</p>
+                <blockquote>
+                    这是一个引用示例，使用了 <code>&lt;blockquote&gt;</code> 标签。
+                </blockquote>
+                <p>下面是一个预格式化文本示例：</p>
+                <pre class="preformatted">
+                    function sayHello() {
+                        console.log("Hello, World!");
+                    }
+               </pre>
+                <footer>
+                    <p>本文结束部分。</p>
+                </footer>
+            </article>
+
+            <!-- 侧边栏 -->
+            <aside>
+                <h4>相关内容</h4>
+                <p>这是侧边栏内容，通常用于展示与主体内容相关的信息。</p>
+            </aside>
+        </section>
+
+        <section id="section3">
+            <h2>联系信息</h2>
+            <address>
+                你可以通过以下方式联系我们：<br>
+                邮箱：example@example.com<br>
+                电话：123-456-7890
+            </address>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 HTML 语义标签示例. 保留所有权利。</p>
+    </footer>
+
+</body>
+
+<!-- 
+文件说明：
+<header> 和 <footer>：用于定义页眉和页脚。
+<nav>：用于定义导航栏。
+<main>：用于定义文档的主体内容。
+<section>：用于定义文档中的章节。
+<article>：用于定义独立的内容块，如文章。
+<aside>：用于定义侧边栏内容。
+<blockquote>：用于定义引用内容。
+<pre>：用于定义预格式化文本。
+<address>：用于定义联系信息。
+这个 HTML 文件示例展示了各种语义标签的使用及其在文档中的应用。每个标签的使用都附有相应的注释，帮助理解其作用和适用场景。
+-->
+
+</html>
