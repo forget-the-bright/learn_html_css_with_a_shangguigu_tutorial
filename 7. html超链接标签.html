@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超链接标签的使用示例</title>
+</head>
+
+<body>
+    <h1>超链接标签的使用示例</h1>
+    <pre>
+        href：指定链接目标 URL。
+        target="_blank"：
+             _blank 在新窗口或新标签页中打开链接。
+                 用法：适用于需要在当前页面中加载新内容的链接。
+             _self 在当前窗口或标签页中打开链接或显示提交结果（默认值）
+                 用法：适用于希望用户保留当前页面的同时在新窗口或新标签页中打开新内容的链接。
+             _parent 在当前框架的父框架中打开链接或显示提交结果。如果当前页面没有父框架，效果与 _self 相同。
+                 用法：适用于框架结构的页面，内容将在当前框架的父级框架中加载。
+             _top 在最外层框架中打开链接或显示提交结果，替换整个浏览器窗口的内容。
+                 用法：适用于框架嵌套的页面，内容将在最外层框架中加载，清除所有嵌套框架。
+             {windowName:自定义的窗口名称}: 在指定名称的窗口或标签页中打开链接。如果该窗口/标签页不存在，则新建一个。
+                 用法：适用于在同一个窗口/标签页中打开多个链接，或是将链接打开到特定的窗口。
+        rel="noopener noreferrer"：提高安全性，防止新窗口获得对原始页面的引用。
+    </pre>
+
+    <h3>1. 导航到外部网站</h3>
+    <span> <strong> 场景：从当前页面导航到另一个网站或网页。 </strong> </span>
+    <br />
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">访问 Google</a>
+
+
+    <h3>2. 导航到同一网站的不同页面</h3>
+    <span> <strong> 场景：在同一网站的不同页面之间导航。</strong> </span>
+    <br />
+    <a href="/6. html图片标签.html" target="_self" rel="noopener noreferrer">访问 html图片标签页面</a>
+
+
+    <h3>3. 页面内的锚点链接</h3>
+    <span> <strong> 场景：在页面内快速跳转到特定部分，通常用于长页面的内容导航。</strong> </span>
+    <br />
+    <a href="#section1">跳转到 下载pdf</a>
+    <br />
+    <img src="https://local.wuanwanghao.top:30549/upload/2021/09/ff0e3bf44104ebf2f54c95b70ce9a521-548c49f511e1479cbbcb97aa73213934.jpg"
+        alt="示例图片" width="500" height="300">
+
+    <h3>4. 打开文件</h3>
+    <span> <strong> 场景：浏览器中打开文件</strong> </span>
+    <pre>浏览器一般支持打开的文件类型: .html, .htm, .txt, .jpg, .jpeg, .png, .gif, .bmp, .webp, .svg, .ico, .mp3, 
+        .wav, .ogg, .m4a, .mp4, .webm, .pdf, .json, .xml, .css, .js, .woff, .woff2, .ttf, .otf, .eot, .zip, .md, .webmanifest, .vtt, .srt</pre>
+    <a target="_blank" href="https://local.wuanwanghao.top:9000/test/test/%E5%A4%B4%E5%83%8F.jpg">打开图片</a>
+    <a target="_blank" href="https://local.wuanwanghao.top:9000/test/test/001.gif">打开gif</a>
+    <a target="_blank"
+        href="https://local.wuanwanghao.top:9000/test/test/%5B%E6%B6%BF%E5%B7%9E%E8%A3%95%E5%BA%AD%E5%95%86%E5%8A%A1%E9%85%92%E5%BA%97%5D-0611-0814(8640%E5%85%83).pdf">
+        打开pdf</a>
+    <a target="_blank" href="https://local.wuanwanghao.top:9000/test/test/001.zip">
+        打开zip_浏览器不支持打开_默认下载</a> <br /><br />
+    <span> <strong> 如何下载默认打开的文件 添加download属性</strong> </span>
+    <pre>
+        注意以下几个问题会导致下载失效
+            1. 跨域资源
+            2. 特定文件类型
+            3. 浏览器安全设置
+            4. HTTPS 和 HTTP 混合内容
+            如果你不考虑服务器端配置，并且客户端的 download 属性无效，可以尝试使用以下 JavaScript 代码强制下载文件。
+    </pre>
+
+    <a href="https://local.wuanwanghao.top:9000/test/test/%E5%A4%B4%E5%83%8F.jpg" download
+        onclick="handleDownload(this.href); return false;">下载图片</a>
+    <a href="https://local.wuanwanghao.top:9000/test/test/001.gif" download
+        onclick="handleDownload(this.href); return false;">下载gif</a>
+    <a href="https://local.wuanwanghao.top:9000/test/test/%5B%E6%B6%BF%E5%B7%9E%E8%A3%95%E5%BA%AD%E5%95%86%E5%8A%A1%E9%85%92%E5%BA%97%5D-0611-0814(8640%E5%85%83).pdf"
+        download onclick="handleDownload(this.href); return false;" id="section1">
+        下载pdf</a>
+
+
+    <h3>5. 唤起系统上面的应用</h3>
+    <span> <strong> 场景：打开用户的默认电子邮件客户端，打开系统上的应用，拨打电话等</strong> </span>
+    <br />
+    <a href="mailto:helloworldwh@163.com">发送电子邮件给helloworldwh@163.com</a>
+    <a href="tel:1008611">打电话给1008611</a>
+    <a href="sms:1008611">发送短信给1008611</a>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <a href="#">回到顶部</a>
+    <a href="">刷新页面</a>
+    <a href="javascript:alert(666);">弹出666窗体</a>
+    <script type="text/javascript">
+        function handleDownload(url) {
+            console.log('准备下载文件：', url);
+
+            // 创建一个 Blob URL 并下载文件（如果需要）
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const blobUrl = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = blobUrl;
+                    a.download = url.split('/').pop(); // 使用文件名作为下载名称
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(blobUrl);
+                })
+                .catch(error => console.error('下载失败:', error));
+        }
+    </script>
+</body>
+
+</html>
