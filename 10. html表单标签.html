@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html表单标签</title>
+</head>
+
+<body>
+    <h2>表单标签简单示例</h2>
+    <form action="https://www.baidu.com/s">
+        <input type="text" name="wd">
+        <input type="submit" value="百度一下">
+    </form>
+    <hr>
+    <form action="https://search.jd.com/search">
+        <input type="text" name="keyword">
+        <input type="submit" value="京东一下">
+    </form>
+    <hr>
+    <h2>表单标签示例</h2>
+    <form action="https://www.baidu.com/s">
+        <label>
+            账号：<input type="text" name="name">
+        </label><br>
+        <label>
+            密码：<input type="password" name="password">
+        </label><br>
+        <label>
+            性别：<input type="radio" name="gender" value="男">男
+            <input type="radio" name="gender" value="女">女
+        </label><br>
+        <label>
+            爱好：<input type="checkbox" name="hobby" value="游戏">游戏
+            <input type="checkbox" name="hobby" value="美女">美女
+            <input type="checkbox" name="hobby" value="旅游">旅游
+            <input type="checkbox" name="hobby" value="睡觉">睡觉
+        </label><br>
+        <label>
+            其他：<textarea name="other"> </textarea>
+        </label><br>
+        <label>
+            籍贯：<select name="province">
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="广州">广州</option>
+                <option value="深圳">深圳</option>
+                <option value="成都">成都</option>
+                <option value="西安">西安</option>
+                <option value="杭州">杭州</option>
+                <option value="武汉">武汉</option>
+                <option value="南京">南京</option>
+            </select>
+        </label><br>
+    </form>
+</body>
+
+</html>
