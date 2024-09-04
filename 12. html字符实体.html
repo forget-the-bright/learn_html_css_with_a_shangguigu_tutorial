@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html字符实体</title>
+</head>
+
+<body>
+    <div>我 爱学习</div>
+    <!-- &nbsp; 即实体字符代表一个空格 ,浏览器会将多个空格字符缩进一个字符，所以表示多个空格用&nbsp;-->
+    <P>我 &nbsp;&nbsp;&nbsp;爱学习</P>
+    <!-- &lt;代表<  &gt;代表> 我们在html中写标签用的<> 会被解析成标签，所以要想显示<>，需要转义，用&lt;和&gt;来代替<>-->
+    <p> 我们学过很多的标签 比如&lt;h1&gt; 标签</p>
+    <!-- &amp 代表&，html解析字符实体的关键字是& 所以要想显示&，需要转义，用&amp;来代替&-->
+    <p> 我们学过很多的字符实体 比如&amp;nbsp 在html 里面代表一个空格</p>
+
+    <!--&yen; 代表￥，直接输入￥可以用&yen;来代替也可以-->
+    <p> 当今商品的价格是￥139</p>
+    <p> 当今商品的价格是&yen;139</p>
+
+    <!--其他一些字符实体  -->
+    <p> 版权所有&copy; </p>
+    <p> 2 &times; 4 = 8 </p>
+
+</body>
+
+</html>

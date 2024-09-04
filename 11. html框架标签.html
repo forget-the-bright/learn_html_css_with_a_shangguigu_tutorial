@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html表单标签</title>
+    <title>Document</title>
 </head>
-
 <body>
-    <h2>表单标签简单示例</h2>
-    <form action="https://www.baidu.com/s">
-        <input type="text" name="wd">
-        <input type="submit" value="百度一下">
-    </form>
-    <hr>
-    <form action="https://search.jd.com/search">
-        <input type="text" name="keyword">
-        <input type="submit" value="京东一下">
-    </form>
-    <hr>
-    <h2>表单标签示例</h2>
-    <form action="https://www.baidu.com/s">
-        <fieldset>
-            <legend>账号信息</legend>
+    <!-- iframe 是一个行内元素，不能独占一行 所以要用br 换号 -->
+    <iframe src="https://www.bilibili.com" width="50%"></iframe>
+    <br>
+    <!-- 可以通过 a target 属性来控制 iframe 的显示内容 -->
+    <a href="https://www.bilibili.com" target="bilibili">to bilibili</a>
+    <br>
+    <iframe name="bilibili" frameborder="0" width="50%" height="300"></iframe>
+
+    <br>
+    <!-- 可以通过 from target 属性来控制提交到的 iframe -->
+    <form action="https://www.baidu.com/s" target="container">
             <label>
                 账号：<input type="text" name="name">
             </label><br>
             <label>
                 密码：<input type="password" name="password">
             </label><br>
-        </fieldset>
-        <fieldset>
-            <legend>个人信息</legend>
+
             <label>
                 性别：<input type="radio" name="gender" value="男">男
                 <input type="radio" name="gender" value="女">女
@@ -42,8 +34,6 @@
                 <input type="checkbox" name="hobby" value="旅游">旅游
                 <input type="checkbox" name="hobby" value="睡觉">睡觉
             </label><br>
-        </fieldset>
-
         <label>
             <!-- 文本域属性 cols="10" 宽 rows="10"字数 高 行数 -->
             其他：<textarea name="other" cols="10" rows="10"> </textarea>
@@ -61,18 +51,12 @@
                 <option value="南京">南京</option>
             </select>
         </label><br>
-        <!-- 两种方式 -->
-        <!-- <button>提交</button>
-        <button type="reset">重置</button>
-        <button type="button">检测数据是否合法</button> -->
-        <fieldset>
-            <legend>操作</legend>
+
             <input type="submit" value="提交">
             <input type="reset" value="重置">
             <input type="button" value="检测数据是否合法">
-        </fieldset>
-
     </form>
+    <br>
+    <iframe name="container" frameborder="0" width="50%" height="300"></iframe>
 </body>
-
 </html>
