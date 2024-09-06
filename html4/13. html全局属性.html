@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Attributes Example</title>
+    <style>
+        /* 为带有 highlight 类的元素设置背景色为黄色 */
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+
+<!-- 带有 id、class、style、title、contenteditable 的段落元素 -->
+<p id="intro" class="highlight" style="color: red;" title="Introduction" contenteditable="true">
+    This is an editable paragraph with a title attribute.
+    <!-- 该段落具有唯一 ID intro，class 为 highlight，颜色设置为红色，且可编辑 -->
+</p>
+
+<!-- 隐藏的图片元素 -->
+<img src="example.jpg" alt="Example Image" hidden>
+<!-- hidden 属性将图片隐藏，alt 属性用于屏幕阅读器 -->
+
+<!-- 带有 accesskey 和 tabindex 的按钮 -->
+<button accesskey="s" tabindex="1">Submit</button>
+<!-- 该按钮可以通过快捷键 's' 触发，tabindex 设置了按 Tab 键的焦点顺序 -->
+
+<!-- 使用 data-* 属性存储自定义数据 -->
+<div data-user-id="12345">User ID is stored in data-* attribute.</div>
+<!-- 该 div 元素存储了用户 ID，供 JavaScript 操作使用 -->
+
+<!-- 启用拼写检查的文本区域 -->
+<textarea spellcheck="true">Spellcheck enabled.</textarea>
+<!-- spellcheck 属性启用拼写检查功能 -->
+
+<!-- 右到左书写方向的文本段落 -->
+<p dir="rtl">This is right-to-left text.</p>
+<!-- dir="rtl" 将文本方向设置为从右到左，适用于如阿拉伯语、希伯来语等语言 -->
+
+<!-- bdo 标签的dir 属性控制文字的文字方向    div的dir属性控制整个div的文字方向 -->
+<div dir="rtl"> 你是年少的欢喜</div>
+<bdo dir="rtl"> 你是年少的欢喜</bdo>
+</body>
+</html>
