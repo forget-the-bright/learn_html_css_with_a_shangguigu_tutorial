@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. CSS伪类选择器</title>
+    <style>
+        /* CSS 伪类选择器用于
+        选择文档中某些特定的元素状态或元素的某些部分。
+        它们通过在选择器名称后面加上 : 的方式表示，
+        适用于动态、交互、结构或其他状态的元素 */
+        a:hover {
+            color: red;
+        }
+        /* 链接伪类选择器, 未访问过的链接 */
+        a:link{
+            color: green;
+        }
+        /* 链接伪类选择器, 访问过的链接 */
+        a:visited{
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+     <a href="https://www.baidu.com" target="_blank">去百度</a>
+     <br>
+     <a href="https://www.google.com" target="_blank">去谷歌</a>
+</body>
+
+</html>

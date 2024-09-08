@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16. CSS结构伪类选择器_1</title>
+    <style>
+        /* 
+        :first-child 选择器选择所有父元素中第一个子元素,无论子元素类型,找到以第一个后，就停止查找。
+        :last-child 选择器选择所有父元素中最后一个子元素
+        :nth-child 选择器选择所有父元素中第n个子元素
+        :nth-last-child 选择器选择所有父元素中倒数第n个子元素
+        :only-child 选择器选择所有父元素中只有一个子元素
+        */
+
+        /* 结构1 :first-child 选择器选择所有父元素中第一个子元素,无论子元素类型,找到以第一个后，就停止查找。
+        
+         div>p:first-child {
+
+            color: red;
+        }
+        */
+        /* 结构2  父元素中第一个子元素为p元素才生效，不是p元素则不生效
+        div>p:first-child {
+            color: red;
+        } */
+
+        /* 结构3  父元素的所有后代的第一个子元素为p元素才生效，不是p元素则不生效
+         div p:first-child {
+            color: red;
+        }  */
+        /* 无论是那个父元素 其中第一个子元素为p元素才生效，不是p元素则不生效 */
+        p:first-child {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 结构1 
+    <div>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+    </div> 
+    -->
+
+    <!-- 结构2   
+     <div>
+        <span>张三: 22</span>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+    </div>
+    -->
+    <p>张三: 22</p>
+    <div>
+        <p>张三: 22</p>
+        <marquee>
+            <p>张三: 22</p>
+        </marquee>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+    </div>
+</body>
+
+</html>

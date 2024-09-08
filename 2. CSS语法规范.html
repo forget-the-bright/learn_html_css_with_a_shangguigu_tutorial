@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2. CSS语法规范</title>
+    <style>
+        /* 内部样式 */
+
+        /* 标签选择器 */
+        h1 {
+            color: navy;
+            text-align: center;
+        }
+
+        /* 类选择器 */
+        .intro {
+            font-size: 18px;
+            color: green;
+        }
+
+        /* ID 选择器 */
+        #highlight {
+            background-color: yellow;
+            padding: 5px;
+        }
+
+        /* 组合选择器 */
+        .box>p {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS 语法示例</h1>
+    <p class="intro">这是一个类选择器的段落。</p>
+    <p id="highlight">这是一个使用 ID 选择器的段落。</p>
+    <div class="box">
+        <p>这是组合选择器中的段落。</p>
+    </div>
+
+</body>
+
+</html>

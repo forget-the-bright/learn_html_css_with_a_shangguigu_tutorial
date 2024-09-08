@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. CSS后代选择器</title>
+    <style>
+        /* CSS后代选择器 选择指定元素的 所有后代 无论多少代 */
+        /* 选择ul里面所有li元素 */
+        ul li {
+            color: green;
+        }
+
+        /* 选择ol里面所有li元素 */
+        ol li {
+            color: red;
+        }
+
+
+         /* 选择ul里面所有li元素 */
+         ul li a{
+            color: grey;
+        }
+
+        /* 选择ol里面所有li元素 */
+        ol li a{
+            color: blue;
+        }
+        .subject li, 
+        .subject [href='#']{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <li>列表6</li>
+        <li>
+            <a href="#"> 烫头</a>
+        </li>
+        <li>列表8</li>
+        <li>列表9</li>
+        <li>列表10</li>
+    </ul>
+    <hr>
+    <ol>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <li>列表6</li>
+        <li><a href="#"> 抽烟</a></li>
+        <li>列表8</li>
+        <li>列表9</li>
+        <li>列表10</li>
+    </ol>
+    <hr>
+
+    <ol class="subject">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <li>列表4</li>
+        <li>列表5</li>
+        <li>列表6</li>
+        <li><a href="#"> 抽烟</a></li>
+        <li>列表8</li>
+        <li>列表9</li>
+        <li>列表10</li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8. CSS交集选择器</title>
+    <style>
+        .rich {
+            color: red;
+        }
+
+        .beauty {
+            color: blue;
+        }
+        /* 交集选择器挨在一起 可以写元素选择器 属性,类和id 选择器,当元素都具有这些属性时才会生效
+        元素选择器必须写在最前面，只能写一个，后面更类型选择器 和 id 选择器或者属性选择器 可以写多个
+        无论以什么开头，如果要交元素选择器，必须写在前面
+        */
+        p.beauty {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="rich">土豪张三</h2>
+    <h2 class="beauty">明星李四</h2>
+    <hr>
+    <p class="beauty">小猪旺财</p>
+    <p class="beauty">小猪佩奇</p>
+</body>
+
+</html>

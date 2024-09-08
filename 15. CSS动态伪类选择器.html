@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. CSS动态伪类选择器</title>
+    <style>
+        /* 
+        这些伪类主要用于与用户的交互事件（如鼠标悬停、点击等）相关。
+        :hover 鼠标移入元素时触发
+        :active 鼠标点击元素时触发
+        :focus 输入框获得焦点时触发
+        :visited 访问过的链接触发
+        :link 未访问过的链接触发
+         */
+
+        /* 链接伪类选择器, 未访问过的链接 */
+        /* 链接伪类选择器, 访问过的链接 */
+        a:link {
+            color: rgb(212, 248, 9);
+        }
+
+        a:visited {
+            color: pink;
+        }
+
+        a:focus {
+            color: blue;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        .hover:hover {
+            color: yellow;
+        }
+
+        .hover:active {
+            color: red;
+        }
+
+        [type='text']:focus {
+            background-color: aquamarine;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <a href="https://www.baidu.com" target="_blank" onclick="return false;">去百度1</a>
+    <br>
+    <a href="https://www.google.com" target="_blank" onclick="return false;">去谷歌2</a>
+    <br>
+    <span class="hover">尚硅谷</span> <br>
+    <input type="text" placeholder="请输入内容" tabindex="0"></input> <br>
+    <input type="text" placeholder="请输入内容" tabindex="0"></input>
+</body>
+
+</html>

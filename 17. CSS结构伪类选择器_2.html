@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17. CSS结构伪类选择器_2</title>
+    <style>
+        /* 
+        :first-child 选择器选择所有父元素中第一个子元素,无论子元素类型,找到以第一个后，就停止查找。
+        :last-child 选择器选择所有父元素中最后一个子元素
+        :nth-child 选择器选择所有父元素中第n个子元素
+        :first-of-type 选择器选择所有父元素中类型符合的第一个子元素
+        :last-of-type 选择器选择所有父元素中类型符合的最后一个子元素
+        :nth-of-type 选择器选择所有父元素中类型符合的第n个子元素
+        */
+
+        /* 
+        :first-child 选择器选择父元素中第一个子元素,无论子元素类型,找到以第一个后，就停止查找。
+         div>p:first-child {
+            color: red;
+        }
+        */
+        /* 
+        结构1
+        :last-child 选择器选择父元素中最后一个子元素，无论子元素类型,找到以第一个后，就停止查找。
+        div>p:last-child {
+            color: red;
+        } */
+
+
+
+        /*
+         结构2
+           选择器选择所有父元素中第n个子元素 
+           nth-child(1) 选择所有父元素中第一个子元素
+           特殊变量n 代表从0到无穷大
+           nth-child(n) 选择所有父元素中第0-n个子元素 即所有子元素
+           nth-child(2n) 选择2*n的元素 假设n=0 2n=0 ,n=1 2n=2, n=2 2n=4 ..., 即选择所有偶数元素
+           nth-child(2n+1) 选择2*n+1的元素 假设n=0 2n+1=1 ,n=1 2n+1=3, n=2 2n+1=5 ..., 即选择所有奇数元素
+           nth-child(even) 选择所有偶数元素 ,even 代表所有偶数元素
+           nth-child(odd) 选择所有奇数元素,odd 代表所有奇数元素
+           nth-child(-n+3) 选择第0-3个子元素,假设n=0 -n+3=3 ,n=1 -n+1=2, n=2 -n+1=1 ..., 即选择第0-3
+           nth-child()  参数列表中参数格式，官方要求 是 an+b的形式，其中a和b都是整数 可以是负数。
+         div>p:nth-child(2n) {
+            color: red;
+         } 
+         */
+
+        /* 结构3 
+         选择器选择所有父元素中第1个子元素类型是P的元素,
+         和 first-child 不同，first-child 只能选择第一个元素不分类型找到就不找了，
+         而 first-of-type 可以选择所有类型为指定类型的元素，找到匹配第一个才不找了
+          div>p:first-of-type {
+            color: red;
+         } 
+         */
+        /*  
+         结构4
+         选择器选择所有父元素中最后1个子元素类型是P的元素,
+         和 last-child 不同，last-child 只能选择最后元素不分类型找到就不找了，
+         而 last-of-type 可以选择所有类型为指定类型的元素，找到匹配的最后一个才不找了
+         div>p:last-of-type {
+            color: red;
+         }
+         */
+        /* 结构5
+           nth-of-type和nth-child 用相同的参数
+           选择器选择所有父元素中类型符合第n个子元素 类型是P的元素,
+         */
+        div>p:nth-of-type(2n) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 结构1 
+    <div>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+    </div> 
+    -->
+    <!-- 结构2
+    <div>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+    </div> 
+    -->
+
+    <!-- 结构3
+       <div>
+        <span>测试分数</span>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+    </div>
+    -->
+    <!-- 结构4 
+    <div>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+        <span>测试分数</span>
+    </div> 
+    -->
+
+    <!-- 结构5 -->
+    <div>
+        <span>测试分数</span>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+        <span>测试分数</span>
+    </div>
+
+
+</body>
+
+</html>

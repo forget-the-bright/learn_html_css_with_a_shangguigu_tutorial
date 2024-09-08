@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13. CSS属性选择器</title>
+    <style>
+        /* 第一种写法 */
+        /*属性选择器 选择所有有data-haha属性的元素 */
+        [data-haha] {
+            color: aquamarine;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /*属性选择器 选择所有有id属性的元素 */
+        [id] {
+            font-size: 20px;
+        }
+
+        /* 第二种写法 */
+        /* 
+         交集选择器和属性选择器混合使用 
+         选择div标签并且带有title属性值为niubiclass666的元素
+        */
+        div[title="niubiclass666"] {
+            color: red;
+        }
+
+        /* 第三种写法 */
+        /* 属性选择器 属性名后带^ 表示匹配="{前戳}" 属性值前缀开头的所有元素*/
+        [title^="a"] {
+            text-decoration: underline;
+        }
+
+        /* 第四种种写法 */
+        /* 属性选择器 属性名后带$ 表示匹配="{后戳}" 属性值后缀结尾的所有元素*/
+        [title$="f"] {
+            text-decoration: underline;
+        }
+
+        /* 第五种种写法 */
+        /* 属性选择器 属性名后带* 表示匹配="{包含}" 属性值包含内容的所有元素*/
+        [title*="b"] {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div title="niubiclass666" id="a">尚硅谷1</div>
+    <div id="b">尚硅谷2</div>
+    <div data-haha="" title="bbbafaf">尚硅谷3</div>
+    <div data-haha="">尚硅谷4</div>
+    <p data-haha="" title="a">P尚硅谷5</p>
+</body>
+
+</html>

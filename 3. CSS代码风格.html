@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. CSS代码风格</title>
+    <style>
+        /* 展开风格 */
+        p {
+            color: red; /* 选择器特定性为 0,0,0,1 */
+        }
+        /* 紧凑风格 */
+        p {color: red;}
+        /* 紧凑风格的css占用文件空间更小,所以优先使用。
+        后面学习到webpack 打包css文件时,会自动压缩css文件*/
+    </style>
+</head>
+<body>
+    <p id="test-paragraph" style="color: blue;">
+        这是一个用于演示 CSS 优先级的段落。
+    </p>
+</body>
+</html>

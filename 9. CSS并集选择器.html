@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. CSS并集选择器</title>
+    <style>
+        .rich {
+            color: red;
+        }
+
+        .beauty {
+            color: blue;
+        }
+        /* 并集选择器 逗号分开，可以写元素选择器 属性,类和id 选择器全部匹配 生效 */
+        p,.beauty {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="rich">土豪张三</h2>
+    <h2 class="beauty">明星李四</h2>
+    <hr>
+    <p class="beauty">小猪旺财</p>
+    <p class="beauty">小猪佩奇</p>
+</body>
+
+</html>
