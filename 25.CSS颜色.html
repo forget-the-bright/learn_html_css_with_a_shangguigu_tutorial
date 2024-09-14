@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 颜色示例</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .color-keyword {
+            color: red;
+        }
+
+        .color-hex {
+            color: #FF5733;
+        }
+
+        .color-rgba {
+            color: rgba(255, 87, 51, 0.5);
+        }
+
+        /* rgb 可以写 数字255 或者 百分比，但是不能混合使用，
+        如果混合使用颜色失效浏览器会使用默认颜色黑色 */
+        .color-rgb {
+            color: rgb(255, 0, 0);
+        }
+
+        .color-rgb-percent {
+            color: rgb(100%, 0%, 0%);
+        }
+
+        .color-rgb-mixin {
+            color: rgb(255, 0%, 0%);
+        }
+
+        .color-gradient {
+            background: linear-gradient(to right, red, yellow);
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="color-keyword">这是关键字颜色 red。</p>
+    <p class="color-hex">这是十六进制颜色 #FF5733。</p>
+    <p class="color-rgba">这是透明度为 50% 的 RGBA 颜色。</p>
+    <p class="color-rgb">这是红色 的 RGBA 颜色。</p>
+    <p class="color-rgb-percent">这是红色的 RGB 颜色。</p>
+    <p class="color-rgb-mixin">这是红色 的 RGB 颜色。</p>
+    <div class="color-gradient">这是线性渐变背景。</div>
+</body>
+
+</html>

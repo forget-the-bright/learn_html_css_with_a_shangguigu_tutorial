@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22. CSS语言伪类选择器</title>
+    <style>
+        /* br~div:lang(zh) {
+            background-color: red;
+        } */
+        br~div:lang(en) {
+            background-color: yellow;
+        }
+
+        br~div:not(:lang(en)) {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <br>
+    <div id="one" lang="en"> first </div>
+    <br>
+    <div id="two" lang="zh"> 第二个 </div>
+    <br>
+    <div id="three" lang="en"> third </div>
+    <br>
+    <div id="four" lang="zh"> 第四个 </div>
+    <br>
+    <div id="five" lang="en"> fifth </div>
+    <br>
+    <div id="six" lang="zh"> 第六个 </div>
+    <br>
+    <div id="seven" lang="en"> seventh </div>
+</body>
+
+</html>

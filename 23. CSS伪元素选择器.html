@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23. CSS伪元素选择器</title>
+    <style>
+        /* 
+        ::first-letter作用：用于选中块级元素的首行文本。 并作用于第一个字母
+         */
+        body>div::first-letter {
+            font-size: 40px;
+            color: red;
+        }
+
+        /* 
+        ::first-line作用：用于选中块级元素的首行文本。 并作用于屏幕上的第一行
+         */
+        body>div::first-line {
+            font-size: 40px;
+            background-color: beige;
+        }
+
+        /* 
+        ::selection作用：用于选中用户在网页中手动选择（高亮）文本时的样式。
+         */
+        body>div::selection {
+            color: red;
+            background-color: aquamarine;
+        }
+
+        /* 
+        ::before
+        作用：用于在元素内容之前插入生成内容。
+        应用场景：为元素添加图标、符号或额外的装饰性内容。
+        注意：需要配合 content 属性使用，不能单独使用。 因为其实是个content 属性的值来设置样式
+        */
+        body>div::before {
+            content: " ★ ";
+            color: gold;
+        }
+
+        /* 
+        ::after
+        作用：用于在元素内容之后插入生成内容。
+        应用场景：为元素添加图标、符号或额外的装饰性内容。
+        注意：需要配合 content 属性使用，不能单独使用。 因为其实是个content 属性的值来设置样式
+        */
+        body>div::after {
+            content: " ★ ";
+            font-size: 40px;
+            color: gold;
+        }
+
+
+        /* 
+        ::marker
+        作用：用于选中列表项标记符（如 <ul> 和 <ol> 的项目符号或编号）的样式。
+        应用场景：自定义列表项前的标记样式（例如颜色、大小、字体等）。
+        注意：只能应用于列表项目。  配合 content 属性使用, 可以改变列表项前的标记样式
+        content: " ★ ";
+        content: " 😂 ";
+        content: " 😍 ";
+        content: url('your-image-path.jpg'); 将图片路径替换为你的实际图片路径 ，图片大小不能超过 20px * 20px,无法调节图片大小。
+        */ 
+
+
+        body>ul>li::marker {
+            content: "😂";
+            color: gold;
+        }
+
+        body>ol>li::marker {
+            /* content: "😍"; */
+            /* content: url('https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/web/static/image/logo-icon-white-bg.f3acc228.png'); */
+            content: "😍";
+            font-size: 20px;
+            color: gold;
+        }
+        body>input::placeholder {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Theseus, the son of King Aegeus, could not stand this situation, and decided to go as the seventh boy and kill
+        the Minotaur. He was not able to escape the Minotaur's claws, and died in his tracks.
+    </div>
+    <hr>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <hr>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <hr>
+    <input type="text" placeholder="输入内容">
+</body>
+
+</html>

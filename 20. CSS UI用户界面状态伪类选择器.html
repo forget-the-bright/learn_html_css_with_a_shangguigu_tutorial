@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20. CSS UI用户界面状态伪类选择器</title>
+    <style>
+        /* :checked：选择已被选中的复选框或单选按钮。 */
+        input:checked {
+            width: 100px;
+            height: 100px;
+            /* 下面的背景色和字体颜色是不生效的，因为复选框和单选框的特殊性，没有办法生效 */
+            background-color: aqua;
+            color: #000;
+        }
+
+        /* :disabled：选择禁用的表单元素。 */
+        input:disabled {
+            background-color: #6613ec;
+            color: #000;
+        }
+
+        /* :enabled：选择启用的表单元素。 */
+        input:enabled {
+            background-color: gray;
+        }
+
+        /* :indeterminate：选择处于不确定状态的元素（例如复选框既不被选中也未被选中）。 */
+        input:indeterminate {
+            width: 120px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" value="选择了吗">
+    <input type="radio" value="选择了吗">
+    <input type="text" value="选择了吗">
+    <input type="text" value="选择了吗" disabled>
+</body>
+
+</html>

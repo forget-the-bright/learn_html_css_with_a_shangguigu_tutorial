@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19. CSS否定伪类选择器</title>
+    <style>
+        /* 否定伪类选择器 ，作用是取反.
+       :not(selector) 选择器选择所有不匹配selector的元素
+       可以嵌套，如:not(:not(.faile))
+        */
+        div>p:not(.faile) {
+            color: red;
+        }
+
+        :not(:not(.faile)) {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p>王五: 44</p>
+        <p>赵六: 55</p>
+        <p>张三: 22</p>
+        <p>李四: 33</p>
+        <p class="faile">王五: 44</p>
+        <p class="faile">赵六: 55</p>
+    </div>
+</body>
+
+</html>

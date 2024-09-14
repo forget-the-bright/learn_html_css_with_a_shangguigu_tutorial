@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity Example</title>
+    <style>
+        /* 优先级最低：元素选择器 (0,0,1) */
+        p {
+            color: black;
+        }
+
+        /* 优先级稍高：类选择器 (0,1,0)*/
+        .highlight {
+            color: blue;
+        }
+
+        /* 优先级更高：ID 选择器  (1,0,0)*/
+        #special {
+            color: red;
+        }
+
+        /* 优先级最高：!important (1,0,0,0)*/
+        img {
+            width: 100% !important;
+            height: 50% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="special" class="highlight">这个段落的颜色将会是红色。</p>
+
+    <img src="https://local.wuanwanghao.top:9000/test/test/image-irjm.png" alt="css样式优先级" />
+</body>
+
+</html>
