@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28. CSS字体间距-字体修饰-字体缩进-字体对齐</title>
+    <style>
+        .fontspacing1 {
+             /* 字体间距 可以为负数 */
+            /* 字体间距 单个文本元素直接的间距: 10px */
+            letter-spacing: 10px;
+        }
+
+        .fontspacing2 {
+            /* 单词间距可以为负数 */
+            /* 单词间距 相邻在一起的文本元素组成的单词 与 单词直接的间距: 10px */
+            word-spacing: 10px;
+        }
+        .fontdecoration0{
+            /* 字体修饰 */
+            /* none: 无修饰 */
+            /* underline: 下划线 */
+            /* overline: 上划线 */
+            /* line-through: 删除线 */
+            text-decoration: none;
+        }
+        .fontdecoration1{
+            
+        }
+        .fontdecoration2{
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>You got a dream,you gotta project it. 尚硅谷1</p>
+    <p class="fontspacing1">You got a dream , you gotta project it. 尚硅谷2</p>
+    <p class="fontspacing2">You got a dream , you gotta project it. 尚硅谷3</p>
+    <hr>
+
+    <p class="fontdecoration0">You got a dream,you gotta project it. 尚硅谷0</p>
+    <p class="fontdecoration1">You got a dream , you gotta project it. 尚硅谷2</p>
+    <p class="fontdecoration2">You got a dream , you gotta project it. 尚硅谷3</p>
+    <hr>
+</body>
+
+</html>
